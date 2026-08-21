@@ -16,7 +16,7 @@ class Transaction:
     date: date
 
 
-
+# test transaction
 transaction = Transaction(
     id=1,
     type = transactionType.EXPENSE,
@@ -25,6 +25,5 @@ transaction = Transaction(
     description = "Wendys",
     date = date.today()
 )
-
 
 print(transaction)
