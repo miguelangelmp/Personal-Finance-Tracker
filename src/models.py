@@ -15,16 +15,3 @@ class Transaction:
     category: str
     description: str
     date: date
-
-
-# test transaction
-transaction = Transaction(
-    id=1,
-    type = TransactionType.EXPENSE,
-    amount = 25.50,
-    category = "Food",
-    description = "Wendys",
-    date = date.today()
-)
-
-print(transaction)
