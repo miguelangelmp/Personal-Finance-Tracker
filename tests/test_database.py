@@ -21,9 +21,9 @@ def test_add_transaction():
     transactions = get_transactions(connection)
 
     assert len(transactions) == 1
-    assert transactions[0][1] == "expense"
-    assert transactions[0][2] == 25.50
-    assert transactions[0][3] == "Food"
-    assert transactions[0][4] == "Wendys"
+    assert transactions[0].type == TransactionType.EXPENSE
+    assert transactions[0].amount == 25.50
+    assert transactions[0].category == "Food"
+    assert transactions[0].description == "Wendys"
 
     connection.close()
