@@ -64,5 +64,14 @@ def get_transactions(connection):
             date = date.fromisoformat(row[5])
         )
         transactions.append(transaction)
-        
+
     return transactions
+
+def delete_transaction(connection, transaction_id):
+    sql = """
+    DELETE FROM transactions
+    WHERE id = ?;
+    """
+
+    connection.execute(sql, (transaction_id,))
+    connection.commit()
